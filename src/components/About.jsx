@@ -2,40 +2,62 @@ import Reveal from './Reveal'
 
 const POINTS = [
   'B.Tech in Electronics and Computer Engineering',
-  'Strong foundation in Java and Data Structures & Algorithms',
-  'Full-stack development across React and Spring Boot',
-  'Builds AI-powered applications, from Jarvis to interview practice tools',
-  'Continuous, daily problem solving as a discipline, not a phase',
+  '500+ LeetCode problems solved with a strong focus on Data Structures & Algorithms',
+  'Full-stack development with React, Java, and Spring Boot',
+  'Built AI-powered applications including Jarvis and interview-focused tools',
+  'Focused on writing clean, efficient, and maintainable software',
 ]
 
 export default function About() {
   return (
-    <section id="about" className="py-28 px-6">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-[0.9fr_1.1fr] gap-14 items-start">
+    <section id="about" className="px-6 py-28">
+      <div className="mx-auto grid max-w-6xl items-start gap-14 md:grid-cols-[0.9fr_1.1fr]">
+
         <Reveal>
-          <p className="font-mono text-sm text-signal-teal mb-3">// 01 · about</p>
-          <h2 className="font-display font-semibold text-3xl text-fog-100">About Me</h2>
+          <div className="mb-3">
+            <p className="font-mono text-sm font-semibold uppercase tracking-[0.18em] text-signal-teal">
+              01 <span className="text-fog-700">•</span> About
+            </p>
+          </div>
+
+          <h2 className="font-display text-3xl font-semibold text-fog-100 sm:text-4xl">
+            About Me
+          </h2>
+
+          <div className="mt-6 h-px w-16 bg-signal-teal/60" />
         </Reveal>
 
         <Reveal delay={100}>
-          <p className="text-fog-300 text-lg leading-relaxed">
-            I'm an Electronics and Computer Engineering student who found that the part of
-            engineering I care about most is software — specifically, the discipline of
-            breaking a hard problem down until it has a clean, efficient solution. That
-            instinct is what pulled me into Data Structures &amp; Algorithms, and it's the
-            same instinct I bring to building full-stack products.
-          </p>
-          <p className="mt-5 text-fog-500 leading-relaxed">
-            On the front end, I work in React. On the back end, Java and Spring Boot. In
-            between, I care about the parts that don't show up in a demo: clean REST APIs,
-            sensible data models, and code that reads the way it runs.
+          <p className="text-lg leading-relaxed text-fog-300">
+            I'm an Electronics and Computer Engineering student focused on
+            software development, problem solving, and building practical
+            applications. My strongest foundation is in Java and Data
+            Structures &amp; Algorithms, where I've solved{' '}
+            <span className="font-semibold text-signal-teal">
+              500+ LeetCode problems
+            </span>
+            .
           </p>
 
-          <ul className="mt-8 space-y-3">
+          <p className="mt-5 leading-relaxed text-fog-500">
+            I build full-stack applications using React on the front end and
+            Java with Spring Boot on the back end. I'm also interested in
+            AI-powered applications and have worked on projects ranging from
+            desktop automation with Jarvis to AI-focused interview tools.
+          </p>
+
+          <ul className="mt-8 space-y-4">
             {POINTS.map((point) => (
-              <li key={point} className="flex items-start gap-3 text-fog-300">
-                <span className="mt-2 h-1.5 w-1.5 rounded-full bg-signal-teal shrink-0" aria-hidden="true" />
-                <span>{point}</span>
+              <li
+                key={point}
+                className="flex items-start gap-3 text-fog-300"
+              >
+                <span
+                  className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-signal-teal shadow-[0_0_8px_rgba(94,234,212,0.45)]"
+                  aria-hidden="true"
+                />
+
+                <span className="leading-relaxed">{point}</span>
               </li>
             ))}
           </ul>
