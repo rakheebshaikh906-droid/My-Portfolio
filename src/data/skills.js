@@ -1,12 +1,10 @@
 export const skillGroups = [
   {
     label: 'Programming',
-    comment: '// languages I think in',
-    items: ['Java', 'JavaScript', 'Python', 'C++'],
+    items: ['Java', 'JavaScript', 'TypeScript', 'Python', 'C++'],
   },
   {
     label: 'Data Structures & Algorithms',
-    comment: '// 450+ problems deep',
     items: [
       'Arrays',
       'Strings',
@@ -29,22 +27,18 @@ export const skillGroups = [
   },
   {
     label: 'Frontend',
-    comment: '// interfaces, built to last',
-    items: ['HTML', 'CSS', 'JavaScript', 'React.js', 'Vite', 'Tailwind CSS'],
+    items: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React.js', 'Vite', 'Tailwind CSS'],
   },
   {
     label: 'Backend',
-    comment: '// where the logic lives',
-    items: ['Java', 'Spring Boot', 'REST APIs'],
+    items: ['Java', 'Spring Boot', 'javaScript', 'Express.js ', 'REST APIs'],
   },
   {
     label: 'Database',
-    comment: '// where the state lives',
     items: ['SQL', 'Firebase Realtime Database'],
   },
   {
     label: 'Tools',
-    comment: '// daily drivers',
     items: ['Git', 'GitHub', 'VS Code', 'IntelliJ IDEA', 'Firebase'],
   },
 ]
