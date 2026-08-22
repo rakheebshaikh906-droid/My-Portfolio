@@ -16,36 +16,53 @@ export default function Navbar() {
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12)
+
     onScroll()
+
     window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
+
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+    }
   }, [])
 
   const handleNav = (href) => {
     setOpen(false)
-    const el = document.querySelector(href)
-    if (el) el.scrollIntoView({ behavior: 'smooth' })
+
+    const element = document.querySelector(href)
+
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      })
+    }
   }
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-colors duration-300 ${
-        scrolled ? 'bg-ink-950/85 backdrop-blur-md border-b border-ink-600/60' : 'bg-transparent'
-      }`}
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled
+        ? 'border-b border-ink-600/60 bg-ink-950/85 backdrop-blur-md'
+        : 'bg-transparent'
+        }`}
     >
-      <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
+
+        {/* Brand */}
         <a
           href="#home"
           onClick={(e) => {
             e.preventDefault()
             handleNav('#home')
           }}
-          className="font-display font-semibold text-fog-100 text-lg tracking-tight"
+          className="font-display text-lg font-semibold tracking-tight text-fog-100 transition-colors duration-200 hover:text-fog-300"
         >
-          Rakheeb<span className="text-signal-teal">.</span>dev
+          Shaikh{' '}
+          <span className="text-signal-teal">Abdul Rakheeb</span>
         </a>
 
-        <ul className="hidden md:flex items-center gap-8 font-mono text-[13px] text-fog-500">
+        {/* Desktop Navigation */}
+        <ul className="hidden items-center gap-7 font-mono text-[13px] text-fog-500 md:flex">
           {LINKS.map((link) => (
             <li key={link.href}>
               <a
@@ -54,7 +71,7 @@ export default function Navbar() {
                   e.preventDefault()
                   handleNav(link.href)
                 }}
-                className="hover:text-signal-teal transition-colors duration-200"
+                className="transition-colors duration-200 hover:text-signal-teal"
               >
                 {link.label}
               </a>
@@ -62,27 +79,40 @@ export default function Navbar() {
           ))}
         </ul>
 
+        {/* Desktop CTA */}
         <a
           href="#contact"
           onClick={(e) => {
             e.preventDefault()
             handleNav('#contact')
           }}
-          className="hidden md:inline-flex items-center rounded-md border border-signal-teal/40 px-4 py-2 text-sm font-medium text-signal-teal hover:bg-signal-teal/10 transition-colors duration-200"
+          className="hidden items-center rounded-md border border-signal-teal/40 px-4 py-2 text-sm font-medium text-signal-teal transition-all duration-200 hover:-translate-y-0.5 hover:bg-signal-teal/10 md:inline-flex"
         >
           Let's talk
         </a>
 
+        {/* Mobile Menu Button */}
         <button
           type="button"
-          onClick={() => setOpen((v) => !v)}
+          onClick={() => setOpen((value) => !value)}
           aria-expanded={open}
-          aria-label="Toggle navigation menu"
-          className="md:hidden text-fog-100 p-2 -mr-2"
+          aria-label={open ? 'Close navigation menu' : 'Open navigation menu'}
+          className="-mr-2 rounded-md p-2 text-fog-100 transition-colors hover:text-signal-teal md:hidden"
         >
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
             {open ? (
-              <path d="M6 6l12 12M18 6l-12 12" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              <path
+                d="M6 6l12 12M18 6l-12 12"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+              />
             ) : (
               <path
                 d="M4 7h16M4 12h16M4 17h16"
@@ -95,9 +125,10 @@ export default function Navbar() {
         </button>
       </nav>
 
+      {/* Mobile Navigation */}
       {open && (
-        <div className="md:hidden bg-ink-950/98 backdrop-blur-md border-b border-ink-600/60 px-6 py-4">
-          <ul className="flex flex-col gap-4 font-mono text-sm text-fog-300">
+        <div className="border-b border-ink-600/60 bg-ink-950/98 px-6 py-5 backdrop-blur-md md:hidden">
+          <ul className="flex flex-col gap-1 font-mono text-sm text-fog-300">
             {LINKS.map((link) => (
               <li key={link.href}>
                 <a
@@ -106,13 +137,24 @@ export default function Navbar() {
                     e.preventDefault()
                     handleNav(link.href)
                   }}
-                  className="block py-1 hover:text-signal-teal transition-colors"
+                  className="block rounded-md px-2 py-2.5 transition-colors hover:bg-ink-800/60 hover:text-signal-teal"
                 >
                   {link.label}
                 </a>
               </li>
             ))}
           </ul>
+
+          <a
+            href="#contact"
+            onClick={(e) => {
+              e.preventDefault()
+              handleNav('#contact')
+            }}
+            className="mt-4 block rounded-md border border-signal-teal/40 px-4 py-2.5 text-center text-sm font-medium text-signal-teal transition-colors hover:bg-signal-teal/10"
+          >
+            Let's talk →
+          </a>
         </div>
       )}
     </header>
