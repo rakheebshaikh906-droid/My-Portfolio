@@ -1,18 +1,34 @@
 export const featuredProject = {
   title: 'Jarvis AI Assistant',
-  tagline: 'A voice-driven desktop assistant that bridges natural language and system control.',
+
+  tagline:
+    'An AI-powered desktop assistant that connects natural language commands with real system actions.',
+
   problem:
-    'Switching between apps, contacts, and websites by hand breaks focus. Jarvis listens for a command, understands intent, and acts — opening an app, placing a call, or answering a question — without the user touching a mouse.',
+    'Switching between applications, websites, and phone actions manually can interrupt workflow. Jarvis is designed to understand voice or text commands and perform actions such as opening applications, answering questions, and interacting with an Android device.',
+
   features: [
     'Voice command recognition with continuous listening',
-    'Text-based command fallback for quiet environments',
-    'Conversational AI responses via connected AI APIs',
-    'Opens applications and websites on command',
-    'Phone integration — calls contacts through ADB / Android bridge',
+    'Text command input as a fallback for quiet environments',
+    'AI-powered conversational responses',
+    'Application and website launching through commands',
+    'Android phone integration through ADB',
+    'Contact calling and phone automation',
     'Desktop automation for repetitive tasks',
-    'A Jarvis-style dashboard UI for visual feedback',
+    'Jarvis-inspired dashboard for visual system feedback',
   ],
-  stack: ['React', 'JavaScript', 'Electron', 'Node.js', 'AI APIs', 'Speech Recognition', 'Speech Synthesis', 'ADB'],
+
+  stack: [
+    'React',
+    'JavaScript',
+    'Electron',
+    'Node.js',
+    'AI APIs',
+    'Speech Recognition',
+    'Speech Synthesis',
+    'ADB',
+  ],
+
   github: 'https://github.com/rakheebshaikh906-droid/Jarvis-Ai-',
   demo: null,
 }
@@ -20,59 +36,120 @@ export const featuredProject = {
 export const projects = [
   {
     title: 'Smart Attendance System',
-    tagline: 'Face-recognition attendance tracking with a real-time admin/student workflow.',
+
+    tagline:
+      'A face-recognition attendance system with real-time data management.',
+
     problem:
-      'Manual attendance is slow and easy to falsify. This system registers students by face, recognizes them at check-in, and writes attendance straight to a live database both admins and students can trust.',
+      'Manual attendance takes time and can be difficult to manage at scale. This project uses face recognition to identify students and records attendance through Firebase Realtime Database.',
+
     features: [
       'Student registration with face capture',
-      'Real-time face recognition at check-in',
-      'Attendance history synced to Firebase Realtime Database',
-      'Separate admin and student workflows',
+      'Face recognition-based attendance',
+      'Real-time attendance data',
+      'Attendance history through Firebase',
+      'Admin and student workflows',
     ],
-    stack: ['React', 'Firebase', 'JavaScript', 'Face Recognition', 'Firebase Realtime Database'],
-    github: 'https://github.com/rakheebshaikh906-droid/Smart-Atendance-System-using-faceRecogination',
+
+    stack: [
+      'React',
+      'JavaScript',
+      'Firebase',
+      'Face Recognition',
+      'Firebase Realtime Database',
+    ],
+
+    github:
+      'https://github.com/rakheebshaikh906-droid/Smart-Atendance-System-using-faceRecogination',
+
     demo: 'https://smart-attendance-system-29984.web.app',
   },
+
   {
     title: 'Smart Resume Analyzer',
-    tagline: 'Parses a resume PDF and surfaces concrete, structured feedback.',
+
+    tagline:
+      'A resume analysis application that extracts PDF content and provides structured feedback.',
+
     problem:
-      'Most resume advice is generic. This tool reads the actual PDF content and reasons over it, so the feedback is grounded in what a candidate actually wrote.',
+      'Generic resume advice does not always address the actual content of a candidate’s resume. This application processes resume content and presents structured feedback based on the document.',
+
     features: [
-      'Client-side PDF parsing and text extraction',
-      'Structured, section-by-section feedback',
-      'Built for fast iteration with Vite',
+      'PDF resume upload and parsing',
+      'Text extraction from resume documents',
+      'Structured resume feedback',
+      'Section-based analysis',
+      'Fast Vite-powered development workflow',
     ],
-    stack: ['React', 'Vite', 'JavaScript', 'PDF Processing', 'AI Concepts'],
-    github: 'https://github.com/rakheebshaikh906-droid/Smart-Resume-Analyzer',
+
+    stack: [
+      'React',
+      'Vite',
+      'JavaScript',
+      'PDF Processing',
+      'AI Concepts',
+    ],
+
+    github:
+      'https://github.com/rakheebshaikh906-droid/Smart-Resume-Analyzer',
+
     demo: 'https://smart-resumeanalyzer.netlify.app/',
   },
+
   {
     title: 'AI Interview Application',
-    tagline: 'A practice ground for technical interviews, with AI in the loop.',
+
+    tagline:
+      'An AI-powered application designed for practicing technical interviews.',
+
     problem:
-      'Interview practice is only useful with feedback. This app asks interview questions, engages in AI-driven back-and-forth, and keeps the session focused on improvement rather than just repetition.',
+      'Interview preparation becomes more useful when candidates can practice questions and receive interactive feedback instead of relying only on static question lists.',
+
     features: [
-      'Structured interview question sets',
-      'AI-driven conversational interaction',
-      'Feedback-oriented practice flow',
+      'Structured technical interview questions',
+      'AI-powered conversational interaction',
+      'Interactive interview practice flow',
+      'Feedback-oriented experience',
     ],
-    stack: ['React', 'JavaScript', 'AI APIs'],
-    github: 'https://github.com/rakheebshaikh906-droid/Ai-Interview-Application',
-    demo: 'https://rakheebshaikh906-droid.github.io/Ai-Interview-Application/',
+
+    stack: [
+      'React',
+      'JavaScript',
+      'AI APIs',
+    ],
+
+    github:
+      'https://github.com/rakheebshaikh906-droid/Ai-Interview-Application',
+
+    demo:
+      'https://rakheebshaikh906-droid.github.io/Ai-Interview-Application/',
   },
+
   {
     title: 'Quiz Application',
-    tagline: 'A clean, componentized quiz app built to practice React fundamentals.',
+
+    tagline:
+      'A React-based quiz application focused on component design and state management.',
+
     problem:
-      'Built as a focused exercise in state management and component design — question flow, scoring, and result states, all handled with plain React.',
+      'Built as a practical React project to work with component state, question flow, scoring, and result handling.',
+
     features: [
-      'Multi-question quiz flow with scoring',
-      'Componentized, reusable question/answer UI',
-      'Responsive layout for quick practice sessions',
+      'Multi-question quiz flow',
+      'Score calculation',
+      'Reusable question and answer components',
+      'Result state handling',
+      'Responsive interface',
     ],
-    stack: ['React', 'JavaScript'],
-    github: 'https://github.com/rakheebshaikh906-droid/QuizApp',
+
+    stack: [
+      'React',
+      'JavaScript',
+    ],
+
+    github:
+      'https://github.com/rakheebshaikh906-droid/QuizApp',
+
     demo: null,
   },
 ]
