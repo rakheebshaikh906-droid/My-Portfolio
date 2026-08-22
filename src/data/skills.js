@@ -3,6 +3,7 @@ export const skillGroups = [
     label: 'Programming',
     items: ['Java', 'JavaScript', 'TypeScript', 'Python', 'C++'],
   },
+
   {
     label: 'Data Structures & Algorithms',
     items: [
@@ -23,49 +24,99 @@ export const skillGroups = [
       'Binary Search',
       'Sliding Window',
       'Two Pointers',
+      'Bit Manipulation',
     ],
   },
+
   {
     label: 'Frontend',
-    items: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React.js', 'Vite', 'Tailwind CSS'],
+    items: [
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'TypeScript',
+      'React.js',
+      'Vite',
+      'Tailwind CSS',
+    ],
   },
+
   {
     label: 'Backend',
-    items: ['Java', 'Spring Boot', 'javaScript', 'Express.js ', 'REST APIs'],
+    items: [
+      'Java',
+      'Spring Boot',
+      'Node.js',
+      'Express.js',
+      'REST APIs',
+    ],
   },
+
   {
     label: 'Database',
-    items: ['SQL', 'Firebase Realtime Database'],
+    items: [
+      'SQL',
+      'Firebase Realtime Database',
+    ],
   },
+
+  {
+    label: 'AI & Desktop',
+    items: [
+      'Electron',
+      'AI APIs',
+      'Speech Recognition',
+      'Speech Synthesis',
+      'ADB',
+    ],
+  },
+
   {
     label: 'Tools',
-    items: ['Git', 'GitHub', 'VS Code', 'IntelliJ IDEA', 'Firebase'],
+    items: [
+      'Git',
+      'GitHub',
+      'VS Code',
+      'IntelliJ IDEA',
+      'Firebase',
+    ],
   },
 ]
 
 export const journey = [
   {
     title: 'Started with programming',
-    detail: 'Picked up core programming fundamentals and started writing real code, not just following tutorials.',
+    detail:
+      'Built a foundation in programming fundamentals and gradually moved from learning concepts to writing real applications.',
   },
+
   {
     title: 'Built web applications',
-    detail: 'Moved into HTML, CSS, JavaScript and React — shipping full applications, not isolated exercises.',
+    detail:
+      'Moved into HTML, CSS, JavaScript, and React while building complete applications instead of isolated exercises.',
   },
+
   {
     title: 'Went deep on DSA',
-    detail: 'Committed to Data Structures & Algorithms as a discipline — arrays through graphs, greedy through DP.',
+    detail:
+      'Committed to Data Structures & Algorithms across arrays, trees, graphs, greedy algorithms, recursion, backtracking, and dynamic programming.',
   },
+
   {
-    title: 'Crossed 450+ LeetCode problems',
-    detail: 'Turned consistent daily practice into a real, compounding problem-solving foundation.',
+    title: 'Crossed 500+ LeetCode problems',
+    detail:
+      'Turned consistent problem-solving practice into a strong foundation in algorithms, patterns, and efficient solutions.',
   },
+
   {
     title: 'Built AI-powered projects',
-    detail: 'Shipped Jarvis, a smart attendance system, and other projects combining AI with real product thinking.',
+    detail:
+      'Built projects including Jarvis, Smart Attendance System, Smart Resume Analyzer, and an AI Interview Application.',
   },
+
   {
     title: 'Now: Java + Spring Boot + Full Stack',
-    detail: 'Currently focused on backend engineering with Spring Boot, REST APIs, and full-stack system design.',
+    detail:
+      'Currently focused on backend development with Java, Spring Boot, REST APIs, React, databases, and full-stack application development.',
   },
 ]
