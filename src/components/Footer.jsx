@@ -1,9 +1,19 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-ink-600/60 py-8 px-6">
-      <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 font-mono text-xs text-fog-700">
-        <p>© {new Date().getFullYear()} Rakheeb Shaikh — built with React, Vite &amp; Tailwind CSS.</p>
-        <p>designed &amp; developed by Rakheeb Shaikh</p>
+    <footer className="border-t border-ink-600/60 px-6 py-8">
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 sm:flex-row">
+
+        <p className="font-mono text-xs text-fog-700">
+          © {new Date().getFullYear()} Shaikh Abdul Rakheeb
+        </p>
+
+        <a
+          href="#home"
+          className="font-mono text-xs text-fog-700 transition-colors duration-200 hover:text-signal-teal"
+        >
+          Back to top ↑
+        </a>
+
       </div>
     </footer>
   )
