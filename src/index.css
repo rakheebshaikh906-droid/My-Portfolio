@@ -2,26 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+/* --------------------------------
+   Base
+-------------------------------- */
+
 html {
   scroll-behavior: smooth;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
+  scroll-padding-top: 80px;
 }
 
 body {
+  margin: 0;
   background-color: #0a0e14;
   color: #e8ecf3;
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 ::selection {
@@ -29,53 +25,118 @@ body {
   color: #0a0e14;
 }
 
-/* Faint schematic grid, the site's quiet background texture */
+/* --------------------------------
+   Background
+-------------------------------- */
+
 .bg-schematic {
+  background-color: #0a0e14;
   background-image:
-    linear-gradient(rgba(94, 234, 212, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(94, 234, 212, 0.05) 1px, transparent 1px);
+    linear-gradient(rgba(94, 234, 212, 0.045) 1px,
+      transparent 1px),
+    linear-gradient(90deg,
+      rgba(94, 234, 212, 0.045) 1px,
+      transparent 1px);
   background-size: 42px 42px;
 }
 
-/* Scroll-reveal: elements start hidden, JS toggles .is-visible */
+/* Soft fade over grid */
+.bg-grid-fade {
+  position: relative;
+}
+
+.bg-grid-fade::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at center,
+      transparent 0%,
+      rgba(10, 14, 20, 0.15) 45%,
+      rgba(10, 14, 20, 0.85) 100%);
+}
+
+/* --------------------------------
+   Scroll Reveal
+-------------------------------- */
+
 .reveal {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .reveal {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
 }
 
 .text-balance {
   text-wrap: balance;
 }
 
-/* Custom scrollbar, subtle, matches dark surface */
-::-webkit-scrollbar {
-  width: 10px;
+/* --------------------------------
+   Animations
+-------------------------------- */
+
+@keyframes spinSlow {
+  from {
+    transform: rotateX(58deg) rotateZ(45deg);
+  }
+
+  to {
+    transform: rotateX(58deg) rotateZ(405deg);
+  }
 }
+
+.animate-spinSlow {
+  animation: spinSlow 12s linear infinite;
+}
+
+@keyframes floatSlow {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-floatSlow {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+/* --------------------------------
+   Scrollbar
+-------------------------------- */
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
 ::-webkit-scrollbar-track {
   background: #0a0e14;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #1f2937;
   border-radius: 999px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #2a3648;
 }
 
-/* Visible keyboard focus ring throughout */
+/* --------------------------------
+   Keyboard Focus
+-------------------------------- */
+
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -83,4 +144,28 @@ textarea:focus-visible {
   outline: 2px solid #5eead4;
   outline-offset: 3px;
   border-radius: 4px;
+}
+
+/* --------------------------------
+   Reduced Motion
+-------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
