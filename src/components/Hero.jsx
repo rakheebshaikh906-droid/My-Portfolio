@@ -55,10 +55,11 @@ export default function Hero() {
         <div className="relative z-10">
 
           {/* Role */}
-          <div className="mb-5 flex items-center gap-3">
+          {/* Role */}
+          <div className="mb-6 flex items-center gap-3">
             <span className="h-px w-10 bg-signal-teal" />
 
-            <p className="font-mono text-sm font-semibold tracking-[0.08em] text-signal-teal sm:text-base">
+            <p className="font-mono text-lg font-semibold tracking-[0.06em] text-signal-teal sm:text-xl">
               Software Developer
               <span className="mx-2 text-fog-700">•</span>
               Full Stack
@@ -66,11 +67,11 @@ export default function Hero() {
           </div>
 
           {/* Main headline */}
-          <h1 className="max-w-3xl font-display text-balance text-[2.35rem] font-semibold leading-[1.08] tracking-tight text-fog-100 sm:text-[2.8rem] lg:text-[2.9rem]">
-            Building Scalable Software.
+          <h1 className="max-w-3xl font-display text-balance text-[2.00rem] font-semibold leading-[1.08] tracking-tight text-fog-100 sm:text-[2.35rem] lg:text-[2.5rem]">
+            Building Practical Software
             <br />
             <span className="text-signal-teal">
-              Solving Hard Problems.
+              Solving Complex Problems
             </span>
           </h1>
 
