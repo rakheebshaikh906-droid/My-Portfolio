@@ -40,7 +40,6 @@ body {
   background-size: 42px 42px;
 }
 
-/* Soft fade over grid */
 .bg-grid-fade {
   position: relative;
 }
@@ -76,40 +75,6 @@ body {
 
 .text-balance {
   text-wrap: balance;
-}
-
-/* --------------------------------
-   Animations
--------------------------------- */
-
-@keyframes spinSlow {
-  from {
-    transform: rotateX(58deg) rotateZ(45deg);
-  }
-
-  to {
-    transform: rotateX(58deg) rotateZ(405deg);
-  }
-}
-
-.animate-spinSlow {
-  animation: spinSlow 12s linear infinite;
-}
-
-@keyframes floatSlow {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-8px);
-  }
-}
-
-.animate-floatSlow {
-  animation: floatSlow 5s ease-in-out infinite;
 }
 
 /* --------------------------------
