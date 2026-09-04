@@ -6,7 +6,7 @@ const CTA_LINKS = [
   },
   {
     label: 'Download Resume',
-    href: '/RESUME.pdf',
+    href: '/MyResumeCurrent.pdf',
     primary: false,
     download: true,
   },
