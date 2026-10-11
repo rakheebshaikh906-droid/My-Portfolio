@@ -57,6 +57,7 @@ export const skillGroups = [
     items: [
       'SQL',
       'Firebase Realtime Database',
+      'MongoDB',
     ],
   },
 
